@@ -86,3 +86,46 @@ div.box6{
     border:1px solid rgb(251, 223, 228);
     padding:5px;
 }
+#ozgecmisTasarimKutusu
+{
+    float:left;
+    background-color:rgba(108, 72, 77, 0.827) ;
+    width:60;
+    height:130px;
+    margin-top:59px;
+}
+#ozgecmisResim1{
+    margin:5px;
+    border:2px solid black;
+    padding:2px  solid pink;
+    margin-top:40px;;
+    margin-left: 5px;
+    margin-bottom:40px;
+}
+
+.ozgecmisBox1{
+    background-color: rgba(90, 50, 57, 0.827);
+    width:202px;
+    height:100%;
+    padding:5px;
+    float:left;
+    padding: 8px;
+    color:#FAE3D6;
+}
+div#ozgecmisBox2{
+    float:right;
+    background-color:rgba(108, 72, 77, 0.827)  ;
+    width: 82.75%;
+    height:130px;
+    top:40px;
+    color:#FAE3D6;
+}
+.bosluk{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left:50px ;
+}
+
+.altiCizili{
+    font-size:20px;
+    text-decoration:underline ;
+}
