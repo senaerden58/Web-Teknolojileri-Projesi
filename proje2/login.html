@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>       
+        <link rel="stylesheet" href="stilSayfası.css">    
+                
+    </head>
+    <body id="login">
+        <nav class="icerik">
+            <a href="Kişisel web sayfası.html">Ana sayfa</a> |  
+            <a href="cv.html">Özgeçmiş</a>|
+            <a href="ilgi alanları.html">İlgi Alanları</a> |
+            <a href="şehrim.html">Şehrim</a>|
+            <a href="mirasımız.html">Mirasımız</a>|
+            <a href="login.html">Giriş</a>|
+            <a href="iletisimSayfası.html">İletişim</a>
+        </nav>
+    <div id="loginBox">
+                        <h2>Sena'nın Web Sayfası</h2>
+                        <div class="vr"></div>           
+                    <form name="frmAd" id="frmAd" action="veri alımı.php" method="post">
+                        <label for="kullanıcı Adı"><b>Kullanıcı Adı:</b></label>
+                        <br>
+                        <input type="text" placeholder="Kullanıcı Adı Giriniz." name="kullaniciAdi" id="kullaniciAdim">
+                        <br><br>
+                        <label for="Email"><b>E-mail adresi:</b></label>
+                        <br>
+                        <input type="text" placeholder="Email adresinizi Giriniz." name="email" id="email">
+                        <br><br>
+                        <label for="sifre"><b>Sifre</b></label>
+                        <br>
+                        <input type="password" placeholder="Şifrenizi Giriniz."  id="şifrem" >
+                        <br><br>
+                        <input type="checkbox" onclick="sifreGoster()">Şifreyi göster
+                        <br>
+                        <label><input type="checkbox" checked="checked" name="remember"> Beni Hatırla</label>
+                        <br>
+                        <input type="submit" value="Gönder">
+                        <br> 
+                    </form>
+                
+    
+                    <script>
+                       // function fncSubmit()
+                       //  {
+                       //  var kullanıcıAdı1=document.frmAd.kullaniciAdim.value;
+                       //  var şifrem1=document.frmAd.şifrem.value;
+                       //  if(kullanıcıAdı1.length>0 && şifrem1.length>0)
+                       //   {
+                       //       document.frmAd.submit();
+                       //  }
+                       //  else{
+                       //      if(kullanıcıAdı1.length==0)
+                        //     {
+                        //     alert("Lütfen kullanıcı adı kısmını doldurunuz.");
+                        //     }
+                        //     else if(şifrem1.length==0)
+                        //     {
+                        //     alert("Lütfen şifre kısmını doldurunuz.")
+                        //     }
+                        // }
+                       //  }
+
+                        function sifreGoster() 
+                        {
+                        var sifre = document.getElementById("şifrem");
+                        if (sifre.type === "password") {
+                         sifre.type = "text";
+                         } else {
+                        sifre.type = "password";
+                        }
+                        }
+
+                    </script>
+               
+    </div>
+  
+    </body>
+
+</html>
