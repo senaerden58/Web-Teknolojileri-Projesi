@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stilSayfası.css">
+    <div class="icerik">
+        <a href="Kişisel web sayfası.html">Ana sayfa</a> |  
+        <a href="cv.html">Özgeçmiş</a>|
+        <a href="ilgi alanları.html">İlgi Alanları</a> |
+        <a href="şehrim.html">Şehrim</a>|
+        <a href="mirasımız.html">Mirasımız</a>|
+        <a href="Giris.html">Giriş</a>|
+        <a href="iletisimSayfası.html">İletişim</a>
+    </div>
+</head>
+<body>
+<h2>Movies</h2>
+
+<div id="movies"></div>
+
+
+<script>
+    const movies=document.getElementById("movies");
+    const imgBaseUrl="http://image.tmdb.org/t/p/w500/";
+    fetch(
+  "https://api.themoviedb.org/3/list/8253331?api_key=55026a95fa125889a9f94a803d64b37d&language=tr-Tr")
+.then(res => res.json())
+.then(data=>data?.items?.map((x) =>
+      movies.insertAdjacentHTML(
+        "beforeend",
+        ` <div class="card">
+      <div class="cardImg"><img src="${
+        imgBaseUrl + x?.poster_path
+      }" alt="" /></div>
+     
+    </div>`)));
+
+ 
+ 
+</script>
+
+</body>
+
+</html>

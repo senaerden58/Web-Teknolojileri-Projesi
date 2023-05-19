@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>İletişim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stilSayfası.css">
+    <div class="icerik">
+        <a href="Kişisel web sayfası.html">Ana sayfa</a> |  
+        <a href="cv.html">Özgeçmiş</a>|
+        <a href="ilgi alanları.html">İlgi Alanları</a> |
+        <a href="şehrim.html">Şehrim</a>|
+        <a href="mirasımız.html">Mirasımız</a>|
+        <a href="Giris.html">Giriş</a>|
+        <a href="iletisimSayfası.html">İletişim</a>
+    </div>
+</head>
+
+<body id="iletisim">
+    <div class="iletisimBox">
+         <h2>İletişim...</h2>
+       
+        <form id="frmAd" action="iletisimVeriAl.php" name="frmAd" method="post">
+            <label for="isim">Ad:</label>
+            <br>
+            <input type="text" id="isim" name="adım" placeholder="İsminizi yazınız...">
+            <br>
+            <label for="Soyad" >Soyad:</label>
+            <br>
+            <input type="text" id="soyad" name="soyad" placeholder="Soyadınızı yazınız..">
+            <br>
+            <label for="email" >Email:</label>
+            <br>
+            <input type="text" id="email" name="emailim" placeholder="Emailinizi yazınız..">
+            <br>
+            <label for="country">Ülke</label>
+            <br>
+            <select id="ülke" name="ülke">
+                <option value="türkiye">Türkiye</option>
+                <option value="avusturalya">Avustralya</option>
+                <option value="kanada">Kanada</option>
+                <option value="amerika">Amerika</option>
+            </select>
+            <br><br> 
+            <label for="Cinsiyet">Cinsiyet:</label>
+                <input type="radio" name="cinsiyet" value="Kadın" checked>Kadın
+                <input type="radio" name="cinsiyet" value="Erkek">Erkek
+            <br>
+            <label for="acıklama">Acıklama</label>
+            <br>
+            <textarea id="acıklama" name="acıklama" placeholder="Bir şeyler yazınız..." style="height:20%"></textarea>
+            <br><br>
+            <input type="submit" value="Gönder" onclick="fncSubmit()">
+            <input type="reset" value="Temizle" > 
+
+        </form> 
+
+            <script>
+                function fncSubmit()
+                {
+                 var ad=document.frmAd.adım.value;
+                 var soyad=document.frmAd.soyad.value;
+                 var email=document.frmAd.email.value;
+                if(ad.length>0 && soyad.length>0 && email.length>0)
+                {
+                     if(email.length>0){
+	                var mail = document.getElementById("email").value;
+	                var regex = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+.)+([.])+[a-zA-Z0-9.-]{2,4}$/;
+	                if (regex.test(mail)==true)
+	                {
+                    alert("Mail adresi geçerli".ad);
+                  
+                    document.frmAd.submit();
+                    }
+	                else
+	                {alert("Hata geçersiz mail adresi girdiniz!");}
+	                }
+                  
+                }
+                else
+                {
+                    if(ad.length==0)
+                    {
+                    alert("Lütfen ad alanını doldurunuz.");
+                    window.location.href = "http://localhost/iletisimSayfas%C4%B1.html";
+                    }
+                    else if(soyad.length==0)
+                    {
+                    alert("Lütfen soyad alanını doldurunuz.");
+                    }
+                    else if(email.length==0)
+                    {
+                    alert("Lütfen email alanını doldurunuz.");
+                    }
+                }
+                }
+                
+            </script>
+           
+          
+
+    </div>
+
+</body>
+</html>
